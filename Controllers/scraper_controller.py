@@ -7,7 +7,7 @@ from Helpers.utils import get_scrapeops_url
 
 logger= logging.getLogger(__name__)
 
-def search_products( product_name: str, page_number: int=1, location:str="us", retries: int=2):
+def search_products( product_name: str, page_number: int=1, location:str="us", retries: int=2, data_pipeline=None):
     scraped_products= []
     attempts =0
     success = False
@@ -67,7 +67,7 @@ def search_products( product_name: str, page_number: int=1, location:str="us", r
                     rating=rating,
                     is_sponsored=is_sponsored  
                 )
-                scraped_products.append(product)
+                data_pipeline.add_data(product)
             
             success = True
 
