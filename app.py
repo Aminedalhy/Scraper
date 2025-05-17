@@ -3,6 +3,7 @@ import pandas as pd
 import os
 from Controllers.scraper_controller import search_products
 from Pipelines.data_pipeline import DataPipeline
+from Agents.Agent_feedback import recommend_best_deal_with_ai
 
 st.set_page_config (page_title="Amazon Scraper", page_icon="AS")
 st.title("Amazon Product Scraper")
@@ -26,4 +27,13 @@ if st.button("Scrape"):
     
     except ValueError as ve:
         st.error(f"Error: {ve}")
-        
+
+    
+st.markdown("---")
+if product_name and os.path.exists (f"{product_name}.csv"):
+    if st.button("recommend the best deal"):
+         with st.spinner ("the AI agent is thinking..."):
+            product, reason = recommend_best_deal_with_ai (f"{product_name}.csv")
+            st.success (f" Recommended product : *** {product}***")
+            st.info (f" Reason {reason}")
+
