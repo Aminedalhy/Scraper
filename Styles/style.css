@@ -1,0 +1,45 @@
+/* styles/style.css */
+
+.title {
+    font-size: 38px;
+    font-weight: 900;
+    color: #1f77b4;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+label {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+}
+
+input[type="text"] {
+    border: 2px solid #d1d1d1;
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+.stButton>button {
+    display: block;
+    margin: 1rem auto;
+    background-color: #1f77b4 !important;
+    color: white !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    padding: 0.6rem 1.5rem !important;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.stButton>button:hover {
+    background-color: #155d8a !important;
+}
