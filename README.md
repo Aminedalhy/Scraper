@@ -31,6 +31,7 @@ Switching between branches lets you explore the project step by step and underst
 ### 📁 Project Structure
 
 amazon_scraper/
+
 ├── controllers/
 │ └── scraper_controller.py # Handles scraping logic (listing + product page)
 ├── enums/
