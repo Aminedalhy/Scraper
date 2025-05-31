@@ -17,33 +17,50 @@ This scraper allows you to extract key product data (like titles, prices, rating
 
 ---
 
-## 📁 Project Structure
+## 🌿 Branch Structure
+
+This project is organized into four development branches, each representing a major step in the project’s lifecycle:
+
+- `scraper_001`: sets up the environment and clean folder architecture (no scraper code yet)
+- `scraper_002`: implements the scraping pipeline and controller logic
+- `scraper_003`: adds the Streamlit user interface for interacting with the scraper
+- `scraper_004`: prepares the branch for optional LLM integration to enhance functionality
+
+Switching between branches lets you explore the project step by step and understand its evolution.
+
+### 📁 Project Structure
 
 amazon_scraper/
 │
 ├── controllers/
-│ └── scraper_controller.py # Handles scraping logic (listing + product page)
+│ └── scraper_controller.py 
+    Handles scraping logic (listing + product page)
 │
 ├── enums/
-│ └── constant_urls.py # Enum for Amazon base URLs per location
+│ └── constant_urls.py 
+    Enum for Amazon base URLs per location
 │
 ├── helpers/
-│ └── scraper_utils.py # Utility functions (like fetch, parse)
+│ └── scraper_utils.py 
+     Utility functions (like fetch, parse)
 │
 ├── models/
-│ └── product_data.py # Dataclasses for structured product data
+│ └── product_data.py 
+     Dataclasses for structured product data
 │
 ├── llm/
-│ └── openai_client.py # (Optional) For future LLM integration
+│ └── openai_client.py 
+     (Optional) For future LLM integration
 │
 ├── ui/
-│ └── app.py # Streamlit interface
+│ └── app.py 
+      Streamlit interface
 │
 ├── main.py # Entrypoint for CLI use
 ├── requirements.txt # Python dependencies
 └── README.md # Project overview
 
-## 💡 How It Works
+#### 💡 How It Works
 
 1. **Product Listing Scrape**  
    Using `scraper_controller.py`, the script navigates to Amazon search results and collects product blocks.
@@ -56,7 +73,7 @@ amazon_scraper/
 
 ---
 
-## 🧪 Quickstart
+##### 🧪 Quickstart
 
 ### 1. Clone the repo
 
