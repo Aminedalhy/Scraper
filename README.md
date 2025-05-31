@@ -31,31 +31,18 @@ Switching between branches lets you explore the project step by step and underst
 ### 📁 Project Structure
 
 amazon_scraper/
-│
 ├── controllers/
-│ └── scraper_controller.py 
-    Handles scraping logic (listing + product page)
-│
+│ └── scraper_controller.py # Handles scraping logic (listing + product page)
 ├── enums/
-│ └── constant_urls.py 
-    Enum for Amazon base URLs per location
-│
+│ └── constant_urls.py # Enum for Amazon base URLs per location
 ├── helpers/
-│ └── scraper_utils.py 
-     Utility functions (like fetch, parse)
-│
+│ └── scraper_utils.py # Utility functions (like fetch, parse)
 ├── models/
-│ └── product_data.py 
-     Dataclasses for structured product data
-│
+│ └── product_data.py # Dataclasses for structured product data
 ├── llm/
-│ └── openai_client.py 
-     (Optional) For future LLM integration
-│
+│ └── openai_client.py # (Optional) For future LLM integration
 ├── ui/
-│ └── app.py 
-      Streamlit interface
-│
+│ └── app.py # Streamlit interface
 ├── main.py # Entrypoint for CLI use
 ├── requirements.txt # Python dependencies
 └── README.md # Project overview
